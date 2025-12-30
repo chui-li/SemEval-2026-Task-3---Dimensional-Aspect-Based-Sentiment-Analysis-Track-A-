@@ -75,8 +75,8 @@ python run_task2_3_trainer_enhanced.py \
     
 輸出將自動儲存於：
 ```bash
-tasks_reduce/subtask_2/*.jsonl
-tasks_reduce/subtask_3/*.jsonl
+tasks/subtask_2/*.jsonl
+tasks/subtask_3/*.jsonl
 ```
 
 # 📊 Performance
