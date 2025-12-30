@@ -80,14 +80,14 @@ python train.py \
 ## 🧪 Evaluate
 
 ```bash
-python run_task2_3_trainer_enhanced.py \
+python train.py \
     --mode evaluate
 ```
 
 ## 📘 Inference
 
 ```bash
-python run_task2_3_trainer_enhanced.py \
+python train.py \
     --mode inference
 ```
 
