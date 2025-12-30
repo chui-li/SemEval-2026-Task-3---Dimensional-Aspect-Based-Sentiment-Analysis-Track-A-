@@ -46,7 +46,7 @@ cd ABSA-Enhanced
 
 # ▶️ How to Run
 ## ⭐ download bert model
-- download hfl/chinese-roberta-wwm-ext-large on huggingface
+- download `hfl/chinese-roberta-wwm-ext-large` on huggingface
 
 ```bash
 python download_model.py
