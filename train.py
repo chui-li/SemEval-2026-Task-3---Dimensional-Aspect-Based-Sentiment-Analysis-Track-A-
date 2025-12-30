@@ -116,9 +116,9 @@ def parser_getting():
 
     parser.add_argument('--data_path', type=str, default="./data/zho/")
     parser.add_argument('--log_path', type=str, default="./log/")
-    parser.add_argument('--save_model_path', type=str, default="./model_reduce/")
-    parser.add_argument('--output_path', type=str, default="./tasks_reduce/")
-    parser.add_argument('--model_name', type=str, default="AOC_essenble")
+    parser.add_argument('--save_model_path', type=str, default="./model/")
+    parser.add_argument('--output_path', type=str, default="./tasks/")
+    parser.add_argument('--model_name', type=str, default="AOC")
 
     parser.add_argument('--train_data', type=str, default="zho_laptop_train_alltasks.jsonl")
     parser.add_argument('--infer_data', type=str, default="zho_laptop_dev_task3.jsonl")
@@ -128,7 +128,7 @@ def parser_getting():
     parser.add_argument('--max_aspect_num', type=str, default="max_aspect_num", choices=["max_aspect_num"])
 
     parser.add_argument('--reload', type=bool, default=False)
-    parser.add_argument('--bert_model_type', type=str, default="/mnt/usr1/azure005/NLP/models/chinese-roberta-wwm-ext-large")
+    parser.add_argument('--bert_model_type', type=str, default="./chinese-roberta-wwm-ext-large")
     parser.add_argument('--hidden_size', type=int, default=1024)
     parser.add_argument('--inference_beta', type=float, default=0.90)
 
@@ -1704,4 +1704,5 @@ if __name__ == '__main__':
     
     train_dataset, test_dataset, category_dict = load_train_data_multilingual(args)
     inference_dataset = load_inference_data(args)
+
     train(args, train_dataset, test_dataset, inference_dataset, category_dict)
