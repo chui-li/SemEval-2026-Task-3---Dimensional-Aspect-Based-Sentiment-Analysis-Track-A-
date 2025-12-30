@@ -13,10 +13,15 @@ This repository provides an enhanced Bidirectional MRC-based model designed for 
 | **Post-processing Optimization**     | Category refinement（語義輔助）提升 Task3 準確度        |
 
 # 📦 Installation
+
+```bash 
 git clone https://github.com/YourRepo/ABSA-Enhanced.git
 cd ABSA-Enhanced
+```
 
 # 📂 Directory Structure
+
+```bash
 .
 ├─ data/                # Dataset inputs
 ├─ tasks/        # Inference output results
@@ -37,10 +42,18 @@ cd ABSA-Enhanced
 ├─ pred_zho_restaurant_0.5825.jsonl
 ├─ rdrop.py
 └─ README.md
+```
 
 # ▶️ How to Run
-## ⭐ Train
+## ⭐ download bert model
+- download hfl/chinese-roberta-wwm-ext-large on huggingface
 
+```bash
+python download_model.py
+```
+
+## ⭐ Train
+```bash
 python train.py \
     --task 3 \
     --domain res \
@@ -62,18 +75,24 @@ python train.py \
     --beta 2.0 \
     --scheduler_type cosine \
     --inference_beta 0.9 \
+```
 
 ## 🧪 Evaluate
 
+```bash
 python run_task2_3_trainer_enhanced.py \
     --mode evaluate
-    
+```
+
 ## 📘 Inference
 
+```bash
 python run_task2_3_trainer_enhanced.py \
     --mode inference
-    
+```
+
 輸出將自動儲存於：
+
 ```bash
 tasks/subtask_2/*.jsonl
 tasks/subtask_3/*.jsonl
